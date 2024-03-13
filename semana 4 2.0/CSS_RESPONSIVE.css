@@ -1,0 +1,177 @@
+*{
+    box-sizing: border-box;
+    margin: 0%;
+    padding: 0%;
+}
+html{
+    max-height:100%;
+}
+body{
+    font-family: tahoma;
+    font-size: 18px;
+    background-image: url(./IMG/incap\ se\ invencible2.jpg);
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+}
+/* SECCION CSS <HEADER> */
+#header{
+    background-color: lightsteelblue;
+    border: 2px solid yellowgreen;
+    border-radius: 22px; /* bordes redondeados */
+    display: flex; /* Tcnica de posiscionamiento para elementos */  
+    flex-direction: row; /* en fila */
+    justify-content: center; /* alinear horizontal*/
+    align-items: center; /* alinear vertical */
+    grid-area: header; /* nombre CSS GRID del <header> */
+}
+ul{
+    padding: 0 0;
+    margin: 0 1px;
+}
+li{
+    list-style: none; /* borrar viñetas */
+    margin: 0 5px;
+    font: bold 12px verdana;
+}
+a{
+    color: wheat;
+    text-decoration: none; /* quitar subrayado */
+}
+/* SECCION CSS <NAV> */
+#menu{
+    grid-area: nav;
+    background-color: cyan;
+    border: 2px solid gray;
+    border-radius: 22px;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    padding: 5px;
+    margin: 5px;
+
+}
+/* SECCION CSS MENU Y SUBMENU */
+.menuB >li{
+    position: relative;
+    display: inline-block;
+
+}
+.menuB >li>a{
+    display: block;
+    padding: 15px 20px;
+    color: wheat;
+    text-decoration: none;
+}
+.menuB li a:hover{/* evento css al pasar el mouse en menu actico */
+    color: black;
+    transition: all .35s;
+}
+/* SECCION DE ESTILOS SUB MENU */
+.submenu{
+    position: absolute;
+    background-color: gray;
+    width: 120%;
+    display: none;/* oculta sub menu */
+}
+.submenu li a{
+    display: block;
+    padding: 15px;
+    color: wheat;
+    text-decoration: none;
+}
+.menuB li:hover .submenu{
+    display: block; /*  evento css para mostrar submenu al pasar mouse encima */
+    z-index: 100;
+}
+/* seccion buscador css y lupa */
+.buscarbox input{
+    height: 35px;
+    width: 0px;
+    padding: 0;
+    border-radius: 40px;
+    border: 0px;
+    padding-right: 50px;
+    transition: ease 0.8s;
+}
+.buscarbox input:hover{
+    width: 150px;
+    padding-left: 10px;
+    outline: none; /* quitar bordes negros */
+}
+/* seccion scc <sectios> */
+#main{
+    grid-area: main; /* nombre CCS grid del <section> */
+    border: 2px solid;
+    border-radius: 22px;
+    max-width: 100%;
+    height: auto;
+    /* efecto glass transparencia */ background-color: rgba(255, 255, 255, 0.6);
+    backdrop-filter: blur(5px;)
+}
+figure{
+    display: inline;
+    margin: 45px;
+    padding: 5px;
+}
+/* seccion css <article> */
+.programa{
+    display: inline-block;
+    margin: 5px;
+    padding: 5px;
+    width: 45%;
+    height: 200px;
+    position: relative;
+    border: 1px solid blue;
+    border-radius: 15px;
+}
+section article{
+    background-color: rgba(255, 255, 255, 0.6);
+    backdrop-filter: blur(5px);
+    margin: 20px;
+}
+/* seccion CSS <aside> */
+#sidebar{
+    grid-area: sideabar; /* nombre css drid del <aside> */
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    background-color: rgba(255, 255, 255, 0.6);
+    backdrop-filter: blur(5px);
+    border-radius: 22px;
+    border: 2px solid yellowgreen;
+}
+iframe{
+    max-width: 100%;
+    height: auto;
+}
+/* seccion css <footer> */
+#footer{
+    grid-area: footer;
+    padding-top: 20px;
+    border: 2px solid yellowgreen;
+    border-radius: 22px;
+    clear: both; /* eliminar position relative absolute*/
+    background-color: rgba(255, 255, 255, 0.6);
+    backdrop-filter: blur(5px);
+}
+#redes{
+padding: 5px;
+margin: 0px;
+}
+#redes a i:hover{
+    transform: scale(2.0);/* efecto de aumentar tamaño de icono al pasar mouse encima*/
+}
+/* seccion de csss para iconos redes sociales fontawesome */
+i[class^=fa]{
+    color: gray;
+    font-size: 18px;
+}
+i[class^=fab]{
+    color: gray;
+    font-size: 30px;
+    border: 1px solid transparent;
+    margin: 0px;
+}
