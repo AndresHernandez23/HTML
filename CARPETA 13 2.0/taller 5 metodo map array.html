@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Array 5</title>
+    <!-- link de sitio Sweetalert mensajes más elegantes-->
+<script src="https://unpkg.com/sweetalert/dist/sweetalert.min.js"></script>
+</head>
+<body>
+    <center>
+        <h1>TALLER METODO MAP ARRAYS</h1>
+        <h2>TRANSFORMAR -  ORDENAMIENTOS INDICES ARRAYS</h2>
+        <br><br>
+        <script>
+            //array inicial
+            let array=[50,40,30,20,10]
+            //indices de reordenamiento a aplicar en array
+            let nuevosIndices=[1,2,3,4,0]
+            //crear nuevo array con elementos reordenados
+            let nuevoArray=nuevosIndices.map(index => array[index]);
+            //salida final
+            document.write("ARRAY INICIAL..."+array);
+            console.log("ARRAY INICIAL",array);
+            document.write("<br>"+"<br>");
+            //nuevo array con reordenamiento
+            document.write("NUEVO ARRAY REORDENADO..."+nuevoArray);
+            console.log("NUEVO ARRAY REORDENADO"+nuevoArray);
+        </script>
+    </center>
+</body>
+</html>
